@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "a71aed0a-c3d0-4104-bc3b-e9f562679914",
+		"name": "Contacts-API",
+		"description": "Contacts-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a new contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": {\n    \"first\": \"Harold\",\n    \"middle\": \"Francis\",\n    \"last\": \"Gilkey\"\n  },\n  \"address\": {\n    \"street\": \"8360 High Autumn Row\",\n    \"city\": \"Cannon\",\n    \"state\": \"Delaware\",\n    \"zip\": \"19797\"\n  },\n  \"phone\": [\n    {\n      \"number\": \"302-611-9148\",\n      \"type\": \"home\"\n    },\n    {\n      \"number\": \"302-532-9427\",\n      \"type\": \"mobile\"\n    }\n  ],\n  \"email\": \"harold.gilkey@yahoo.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of all contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"contacts"
+					]
+				},
+				"description": "Create a new contact"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": {\n            \"first\": \"Harold\",\n            \"middle\": \"Francis\",\n            \"last\": \"Gilkey\"\n        },\n        \"address\": {\n            \"street\": \"8360 High Autumn Row\",\n            \"city\": \"Cannon\",\n            \"state\": \"Delaware\",\n            \"zip\": \"19797\"\n        },\n        \"phone\": [\n            {\n                \"number\": \"302-611-9148\",\n                \"type\": \"home\"\n            },\n            {\n                \"number\": \"302-532-9427\",\n                \"type\": \"mobile\"\n            }\n        ],\n        \"email\": \"test@yahoo.com\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/contacts/DmmnLDhd4QeLsXLA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"contacts",
+						"DmmnLDhd4QeLsXLA"
+					]
+				},
+				"description": "Update a contact"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/contacts/DmmnLDhd4QeLsXLA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"contacts",
+						"DmmnLDhd4QeLsXLA"
+					]
+				},
+				"description": "Get a specific contact"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/contacts/DmmnLDhd4QeLsXLA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"contacts",
+						"DmmnLDhd4QeLsXLA"
+					]
+				},
+				"description": "Delete a contact"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a call-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/callList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"callList"
+					]
+				},
+				"description": "Get a call-list"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
